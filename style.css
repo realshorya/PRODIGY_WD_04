@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+    scroll-behavior:smooth
+}
+body{
+    background:#f5f7fb;
+    color:#222
+}
+header{
+    position:fixed;
+    width:100%;
+    background:#0f172a;
+    color:#fff;
+    padding:15px 8%;
+    z-index:99
+}
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+}
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none
+}
+nav a{
+    text-decoration:none;
+    color:#fff
+}
+#toggle{
+    display:none
+}
+#typing{
+    font-size:5rem;
+}
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:100vh;
+    padding:120px 8%;
+    background:linear-gradient(135deg,#2563eb,#38bdf8);
+    color:#fff;
+    flex-wrap:wrap
+}
+.hero img{
+    width:320px;
+    border-radius:50%;
+    border:6px solid #fff
+}
+.btn{
+    display:inline-block;
+    background:#fff;
+    color:#2563eb;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    margin-top:20px;
+    border:none;
+    cursor:pointer
+}
+section{
+    padding:80px 8%
+}
+h2{
+    text-align:center;
+    margin-bottom:35px
+}
+.card,.project,.box,form{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08)
+}
+.grid,.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px
+}
+form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px
+}
+input,textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px
+}
+footer{
+    text-align:center;
+    background:#0f172a;
+    color:#fff;
+    padding:20px
+}
+@media(max-width:768px){
+    nav ul{
+        display:none;
+        flex-direction:column;
+        background:#0f172a;
+        position:absolute;
+        top:60px;
+        right:20px;
+        padding:20px
+    }
+    nav ul.show{
+        display:flex
+    }
+    #toggle{
+        display:block;
+        cursor:pointer
+    }
+    .hero{
+        text-align:center;
+        justify-content:center
+    }
+    .hero img{
+        margin-top:30px;
+        width:250px
+    }
+}
+@media (min-width: 850px) and (max-width: 1100px){
+#typing{
+    font-size:4rem;
+    }
+}
+@media (min-width: 760px) and (max-width: 850px){
+#typing{
+    font-size:3rem;
+    }
+}
+@media(max-width: 760px){
+#typing{
+    font-size:1.9rem;
+    }
+}
